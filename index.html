@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Input Tesing</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: crimson;
+            margin: 20px auto;
+            line-height: 100px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Input Detection Test</h1>
+    <p>Press keys on your keyboard, or click the box below!</p>
+
+    <!-- Our clickable box -->
+    <div id="box">CLICK ME</div>
+
+    <!-- Our text display area -->
+    <h2 id="display-text">Waiting for input...</h2>
+
+    <script>
+        const myBox = document.getElementById('box');
+        const display = document.getElementById('display-text');
+
+        // Mouse Click Detection
+        myBox.addEventListener('click', function() {
+            display.innerText = "💥 Box was clicked!";
+            myBox.style.backgroundColor = "gold"; // Temporarily change color
+
+            setTimeout(() => { myBox.style.backgroundColor = "crimson"; }, 200);
+        });
+
+        // Keyboard Press Detection
+        window.addEventListener('keydown', function(event) {
+            // Display exactly what key you pressed on screen
+            display.innerText = "⌨️ Key pressed: " + event.key;
+        });
+    </script>
+
+</body>
+</html>
+
+    <h1 id="level-header">LEVEL 1: THE DUNGEON</h1>
+    <p>A hooded figure stands silently on the cracked stone floor...</p>
+    <p class="system-message">[Press SPACEBAR to continue]</p>
+
+</body>
+</html>
